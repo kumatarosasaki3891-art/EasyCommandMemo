@@ -1,6 +1,7 @@
 # EasyCommandMemo（簡単コマンド帳）
 
 [![Releases](https://img.shields.io/github/v/release/kumatarosasaki3891-art/EasyCommandMemo?label=Linux%20Release&color=0284c7)](https://github.com/kumatarosasaki3891-art/EasyCommandMemo/releases)
+[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Windows%2010%2F11-f97316)](https://apps.microsoft.com/detail/9MTDGWRVRKNZ?hl=ja&gl=JP&ocid=pdpshare)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 [English](README_EN.md) | 日本語
@@ -15,7 +16,7 @@
 ## 📥 ダウンロード / Download
 
 - **🐧 Linux版 (Flatpakバンドル)**: [GitHub Releases](https://github.com/kumatarosasaki3891-art/EasyCommandMemo/releases)（下記「Flatpak パッケージのビルド」および [FLATHUB_GUIDE.md](FLATHUB_GUIDE.md) からビルドも可能）
-- **🪟 Windows 10 / 11版**: [紹介サイト](https://sites.google.com/view/kuma-applications/%E7%B0%A1%E5%8D%98%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%B8%B3)（下記手順からソースビルド・MSIX パッケージ作成も可能です）
+- **🪟 Windows 10 / 11版**: [Microsoft Store から無料で入手](https://apps.microsoft.com/detail/9MTDGWRVRKNZ?hl=ja&gl=JP&ocid=pdpshare) / [紹介サイト](https://sites.google.com/view/kuma-applications/%E7%B0%A1%E5%8D%98%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%B8%B3)（下記手順からソースビルド・MSIX パッケージ作成も可能です）
 
 ---
 

@@ -1,6 +1,7 @@
 # EasyCommandMemo (簡単コマンド帳)
 
 [![Releases](https://img.shields.io/github/v/release/kumatarosasaki3891-art/EasyCommandMemo?label=Linux%20Release&color=0284c7)](https://github.com/kumatarosasaki3891-art/EasyCommandMemo/releases)
+[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Windows%2010%2F11-f97316)](https://apps.microsoft.com/detail/9MTDGWRVRKNZ?hl=en-us&gl=US&ocid=pdpshare)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 English | [日本語](README.md)
@@ -15,7 +16,7 @@ Your commands are stored locally in a SQLite database on your PC so you can find
 ## 📥 Download
 
 - **🐧 Linux (Flatpak bundle)**: [GitHub Releases](https://github.com/kumatarosasaki3891-art/EasyCommandMemo/releases) (or build locally using the Flatpak instructions below and [FLATHUB_GUIDE.md](FLATHUB_GUIDE.md))
-- **🪟 Windows 10 / 11**: [Project Website](https://sites.google.com/view/kuma-applications/%E7%B0%A1%E5%8D%98%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%B8%B3) (you can also build from source and package as MSIX using the instructions below)
+- **🪟 Windows 10 / 11**: [Get it free from the Microsoft Store](https://apps.microsoft.com/detail/9MTDGWRVRKNZ?hl=en-us&gl=US&ocid=pdpshare) / [Project Website](https://sites.google.com/view/kuma-applications/%E7%B0%A1%E5%8D%98%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E5%B8%B3) (you can also build from source and package as MSIX using the instructions below)
 
 ---
 
