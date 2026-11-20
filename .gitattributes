@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# Windows batch files must remain CRLF.
+*.cmd text eol=crlf
+
+# Bash scripts must remain LF.
+*.sh text eol=lf

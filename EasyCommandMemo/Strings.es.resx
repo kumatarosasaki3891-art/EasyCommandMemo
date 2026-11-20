@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Text_AppName" xml:space="preserve"><value>Easy Command Memo</value></data>
+  <data name="Text_SearchPlaceholder" xml:space="preserve"><value>Buscar comandos, descripciones, etiquetas</value></data>
+  <data name="Text_QuickSearch" xml:space="preserve"><value>Búsqueda rápida</value></data>
+  <data name="Text_QuickShortcutHint" xml:space="preserve"><value>Enter: Copiar   ↑↓: Seleccionar   Ctrl+Enter: Detalles   Esc: Cerrar</value></data>
+  <data name="Text_ImportJson" xml:space="preserve"><value>Importar JSON</value></data>
+  <data name="Text_ExportJson" xml:space="preserve"><value>Exportar JSON</value></data>
+  <data name="Text_ThemeToggle" xml:space="preserve"><value>Cambiar tema claro / oscuro</value></data>
+  <data name="Text_AddCommand" xml:space="preserve"><value>＋ Nuevo comando</value></data>
+  <data name="Text_QuickLaunchTooltip" xml:space="preserve"><value>Búsqueda rápida (Ctrl+Mayús+Espacio)</value></data>
+  <data name="Text_Library" xml:space="preserve"><value>Biblioteca</value></data>
+  <data name="Text_AllCategories" xml:space="preserve"><value>Todo</value></data>
+  <data name="Text_Favorites" xml:space="preserve"><value>Favoritos</value></data>
+  <data name="Text_FavoriteAdd" xml:space="preserve"><value>☆ Añadir a favoritos</value></data>
+  <data name="Text_FavoriteRemove" xml:space="preserve"><value>★ Quitar de favoritos</value></data>
+  <data name="Text_InitialStatus" xml:space="preserve"><value>Añade comandos para crear tu biblioteca personalizada de comandos.</value></data>
+  <data name="Text_StatusSaved" xml:space="preserve"><value>Comando guardado.</value></data>
+  <data name="Text_StatusDeletedPrefix" xml:space="preserve"><value> ha sido eliminado.</value></data>
+  <data name="Text_StatusFavoriteAdded" xml:space="preserve"><value>Añadido a favoritos.</value></data>
+  <data name="Text_StatusFavoriteRemoved" xml:space="preserve"><value>Eliminado de favoritos.</value></data>
+  <data name="Text_StatusCopied" xml:space="preserve"><value>Comando copiado al portapapeles.</value></data>
+  <data name="Text_CopyCountTooltip" xml:space="preserve"><value>Veces copiado</value></data>
+  <data name="Text_StatusImported" xml:space="preserve"><value> comandos importados con éxito.</value></data>
+  <data name="Text_StatusExported" xml:space="preserve"><value>JSON exportado con éxito.</value></data>
+  <data name="Text_ImportFailed" xml:space="preserve"><value>Error al importar: </value></data>
+  <data name="Text_ExportFailed" xml:space="preserve"><value>Error al exportar: </value></data>
+  <data name="Text_Commands" xml:space="preserve"><value>Comandos</value></data>
+  <data name="Text_RegisteredNotes" xml:space="preserve"><value>Comandos guardados</value></data>
+  <data name="Text_CopyTooltip" xml:space="preserve"><value>Copiar este comando</value></data>
+  <data name="Text_Copy" xml:space="preserve"><value>⧉  Copiar</value></data>
+  <data name="Text_Edit" xml:space="preserve"><value>Editar</value></data>
+  <data name="Text_Delete" xml:space="preserve"><value>Eliminar</value></data>
+  <data name="Text_CommandLabel" xml:space="preserve"><value>Comando</value></data>
+  <data name="Text_EmptySelection" xml:space="preserve"><value>Selecciona un comando o crea uno nuevo</value></data>
+  <data name="Text_CopyComplete" xml:space="preserve"><value>⧉  Copiado</value></data>
+  <data name="Text_NoResults" xml:space="preserve"><value>No se encontraron comandos coincidentes</value></data>
+  <data name="Text_Faq" xml:space="preserve"><value>Preguntas frecuentes</value></data>
+  <data name="Text_Information" xml:space="preserve"><value>Acerca de</value></data>
+  <data name="Text_Language" xml:space="preserve"><value>Idioma</value></data>
+  <data name="Text_Close" xml:space="preserve"><value>Cerrar</value></data>
+  <data name="Text_FaqTitle" xml:space="preserve"><value>Preguntas frecuentes</value></data>
+  <data name="Text_FaqQ1" xml:space="preserve"><value>¿Dónde se guardan los comandos?</value></data>
+  <data name="Text_FaqA1" xml:space="preserve"><value>Los comandos se almacenan en una base de datos SQLite en tu carpeta de datos de usuario local. Puedes exportar a JSON para hacer una copia de seguridad.</value></data>
+  <data name="Text_FaqQ2" xml:space="preserve"><value>¿La aplicación ejecuta los comandos?</value></data>
+  <data name="Text_FaqA2" xml:space="preserve"><value>No. Solo copia el comando (o la plantilla rellenada con variables) en el portapapeles.</value></data>
+  <data name="Text_FaqQ3" xml:space="preserve"><value>¿Cómo abro la búsqueda rápida?</value></data>
+  <data name="Text_FaqA3" xml:space="preserve"><value>Haz clic en el botón de búsqueda o usa el atajo Ctrl+Mayús+Espacio. Usa ↑↓ para seleccionar, Enter para copiar, Ctrl+Enter para ver detalles y Esc para cerrar.</value></data>
+  <data name="Text_FaqQ4" xml:space="preserve"><value>¿Cómo funcionan las variables de plantilla?</value></data>
+  <data name="Text_FaqA4" xml:space="preserve"><value>Al copiar, si un comando contiene marcadores de posición como {name}, puedes introducir los valores para sustituirlos antes de copiar.</value></data>
+  <data name="Text_FaqQ5" xml:space="preserve"><value>¿Cómo transfiero comandos a otra computadora?</value></data>
+  <data name="Text_FaqA5" xml:space="preserve"><value>Expórtalos en formato JSON y luego importa ese archivo en la otra computadora.</value></data>
+  <data name="Text_AboutDescription" xml:space="preserve"><value>Una biblioteca personal para guardar, buscar y copiar comandos.</value></data>
+  <data name="Text_VersionLabel" xml:space="preserve"><value>Versión</value></data>
+  <data name="Text_DeleteConfirm" xml:space="preserve"><value>¿Seguro que deseas eliminar el comando seleccionado?</value></data>
+  <data name="Text_DeleteConfirmTitle" xml:space="preserve"><value>Confirmar eliminación</value></data>
+  <data name="Text_Cancel" xml:space="preserve"><value>Cancelar</value></data>
+  <data name="Text_Save" xml:space="preserve"><value>Guardar</value></data>
+  <data name="Text_NewCommand" xml:space="preserve"><value>Añadir comando</value></data>
+  <data name="Text_EditCommand" xml:space="preserve"><value>Editar comando</value></data>
+  <data name="Text_TitleRequired" xml:space="preserve"><value>Título *</value></data>
+  <data name="Text_CategoryRequired" xml:space="preserve"><value>Categoría *</value></data>
+  <data name="Text_Tags" xml:space="preserve"><value>Etiquetas</value></data>
+  <data name="Text_Description" xml:space="preserve"><value>Descripción</value></data>
+  <data name="Text_TitlePlaceholder" xml:space="preserve"><value>Ej.: Listar contenedores de Docker</value></data>
+  <data name="Text_CategoryPlaceholder" xml:space="preserve"><value>Ej.: Docker, Git, Linux</value></data>
+  <data name="Text_TagsPlaceholder" xml:space="preserve"><value>Separadas por comas: container, list</value></data>
+  <data name="Text_CommandPlaceholder" xml:space="preserve"><value>Introduce el comando a ejecutar</value></data>
+  <data name="Text_DescriptionPlaceholder" xml:space="preserve"><value>Propósito o notas</value></data>
+  <data name="Text_VariableTitle" xml:space="preserve"><value>Introducir variables</value></data>
+  <data name="Text_VariablePrompt" xml:space="preserve"><value>Introduce los valores para el comando</value></data>
+  <data name="Text_CopyPreview" xml:space="preserve"><value>Comando listo para copiar</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.0</value></data>
+  <data name="Text_Homepage" xml:space="preserve"><value>🌐  Sitio web</value></data>
+  <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (Información del desarrollador)</value></data>
+  <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>Solo favoritos</value></data>
+</root>

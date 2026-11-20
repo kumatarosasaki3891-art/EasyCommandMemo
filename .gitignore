@@ -1,0 +1,27 @@
+# Build output
+**/bin/
+**/obj/
+dist/
+publish/
+build-dir/
+.flatpak-builder/
+repo/
+*.flatpak
+*.msix
+*.msixbundle
+*.appx
+*.pfx
+*.cer
+*.snk
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak

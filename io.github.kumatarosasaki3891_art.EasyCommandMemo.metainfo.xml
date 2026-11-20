@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.kumatarosasaki3891_art.EasyCommandMemo</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+
+  <name>EasyCommandMemo</name>
+  <name xml:lang="ja">簡単コマンド帳 (EasyCommandMemo)</name>
+
+  <summary>Save, search, and copy commands locally with quick search and template variables</summary>
+  <summary xml:lang="ja">よく使うコマンドをローカル保存し、クイック検索やテンプレート変数展開ですぐコピーできるコマンド帳</summary>
+
+  <description>
+    <p>
+      EasyCommandMemo is a simple, fast personal command library for saving, organizing, searching, and copying frequently used CLI commands.
+    </p>
+    <p>
+      Everything is stored locally in a SQLite database on your device with no network communication and no automatic command execution—it only copies commands to your clipboard.
+    </p>
+    <p>Key Features:</p>
+    <ul>
+      <li>Local SQLite Storage &amp; JSON Backup: Organize commands by category, tags, favorites, and descriptions, and back up or migrate via JSON import/export.</li>
+      <li>Quick Search Launcher: Filter commands instantly, toggle Favorites-only filtering, navigate with arrow keys, and copy with Enter (supports single-instance --quick launch).</li>
+      <li>Template Variable Expansion: Placeholders like {container} or {pattern} prompt for values with a live preview before copying to the clipboard.</li>
+      <li>Usage-Sorted Results: Tracks copy counts locally so frequently used commands surface at the top.</li>
+      <li>Light/Dark Themes &amp; 11 Languages: Supports Light, Dark, and System themes along with 11 UI languages.</li>
+    </ul>
+    <p xml:lang="ja">
+      簡単コマンド帳 (EasyCommandMemo) は、よく使う CLI コマンドをカテゴリやタグ・お気に入りで整理し、すばやく検索してクリップボードへコピーできる軽量デスクトップアプリです。
+    </p>
+    <p xml:lang="ja">
+      すべてのデータは PC 内のローカル SQLite データベースに保存され、通信やコマンドの自動実行は一切行いません（クリップボードへのコピーのみを行います）。
+    </p>
+    <p xml:lang="ja">主な機能:</p>
+    <ul xml:lang="ja">
+      <li>ローカル SQLite 保存と JSON バックアップ: カテゴリ・タグ・説明・お気に入り・コピー回数を保存し、JSON の書き出し／読み込みで移行できます。</li>
+      <li>クイック検索ランチャー: キーワード検索とお気に入りのみ絞り込みに対応し、↑↓ 選択と Enter ですぐコピーできます（単一起動の --quick 引数に対応）。</li>
+      <li>テンプレート変数展開: コマンド内の {container} や {pattern} などの変数をコピー時に入力し、プレビューを確認しながら置換コピーできます。</li>
+      <li>コピー回数順の並び替え: よく使うコマンドほど上位に表示され、すぐ呼び出せます。</li>
+      <li>テーマ切替と 11 言語対応: ライト／ダーク／システムテーマ、日本語・英語など 11 言語の表示に対応しています。</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.kumatarosasaki3891_art.EasyCommandMemo.desktop</launchable>
+
+  <url type="homepage">https://github.com/kumatarosasaki3891-art/EasyCommandMemo</url>
+  <url type="bugtracker">https://github.com/kumatarosasaki3891-art/EasyCommandMemo/issues</url>
+  <url type="vcs-browser">https://github.com/kumatarosasaki3891-art/EasyCommandMemo</url>
+
+  <developer id="io.github.kumatarosasaki3891_art">
+    <name>Sasaki Kumataro</name>
+  </developer>
+
+  <provides>
+    <binary>EasyCommandMemo</binary>
+  </provides>
+
+  <content_rating type="oars-1.1" />
+
+  <releases>
+    <release version="1.1.0" date="2026-11-21">
+      <description>
+        <p>Added a Favorites-only filter checkbox in Quick Search, Flatpak packaging support with sandbox-aware single-instance IPC, and updated About links.</p>
+        <p xml:lang="ja">クイック検索の「お気に入りのみ」絞り込みチェックボックス、Flatpak サンドボックス対応（単一起動 IPC 含む）、アプリ情報リンクの更新を追加しました。</p>
+      </description>
+    </release>
+    <release version="1.0.0" date="2026-11-10">
+      <description>
+        <p>Initial release with local SQLite command library, Quick Search launcher, template variable substitution, JSON import/export, and 11-language UI.</p>
+        <p xml:lang="ja">ローカル SQLite コマンド帳、クイック検索、テンプレート変数展開、JSON 入出力、11 言語 UI を備えた初期リリース。</p>
+      </description>
+    </release>
+  </releases>
+</component>

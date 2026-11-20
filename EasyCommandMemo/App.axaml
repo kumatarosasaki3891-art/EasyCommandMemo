@@ -1,0 +1,75 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="EasyCommandMemo.App"
+             xmlns:local="using:EasyCommandMemo"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#F3F6F4" />
+                    <SolidColorBrush x:Key="SurfaceBackgroundBrush" Color="#FFFFFF" />
+                    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="#F8FAF9" />
+                    <SolidColorBrush x:Key="BorderBrush" Color="#DCE5E1" />
+                    <SolidColorBrush x:Key="PrimaryTextBrush" Color="#172D28" />
+                    <SolidColorBrush x:Key="SecondaryTextBrush" Color="#40564D" />
+                    <SolidColorBrush x:Key="MutedTextBrush" Color="#718079" />
+                    <SolidColorBrush x:Key="AccentBrush" Color="#15745A" />
+                    <SolidColorBrush x:Key="PrimaryButtonForegroundBrush" Color="#FFFFFF" />
+                    <SolidColorBrush x:Key="AccentHoverBrush" Color="#0F624B" />
+                    <SolidColorBrush x:Key="AccentPressedBrush" Color="#0B503D" />
+                    <SolidColorBrush x:Key="AccentSurfaceBrush" Color="#E2F0E9" />
+                    <SolidColorBrush x:Key="AccentSurfaceHoverBrush" Color="#D6E8DE" />
+                    <SolidColorBrush x:Key="AccentSurfacePressedBrush" Color="#C6DDCF" />
+                    <SolidColorBrush x:Key="ButtonHoverBrush" Color="#E4ECE8" />
+                    <SolidColorBrush x:Key="ButtonPressedBrush" Color="#CEDFD6" />
+                    <SolidColorBrush x:Key="CodeSurfaceBrush" Color="#F1F6F3" />
+                    <SolidColorBrush x:Key="CountSurfaceBrush" Color="#E4ECE8" />
+                    <SolidColorBrush x:Key="FavoriteBrush" Color="#C27635" />
+                    <SolidColorBrush x:Key="DangerBrush" Color="#A63D36" />
+                    <SolidColorBrush x:Key="ToastBackgroundBrush" Color="#D917302B" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#171D1B" />
+                    <SolidColorBrush x:Key="SurfaceBackgroundBrush" Color="#202825" />
+                    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="#1B2320" />
+                    <SolidColorBrush x:Key="BorderBrush" Color="#37443E" />
+                    <SolidColorBrush x:Key="PrimaryTextBrush" Color="#E7EFEB" />
+                    <SolidColorBrush x:Key="SecondaryTextBrush" Color="#C0CEC7" />
+                    <SolidColorBrush x:Key="MutedTextBrush" Color="#9AA9A1" />
+                    <SolidColorBrush x:Key="AccentBrush" Color="#55B995" />
+                    <SolidColorBrush x:Key="PrimaryButtonForegroundBrush" Color="#10251C" />
+                    <SolidColorBrush x:Key="AccentHoverBrush" Color="#3EA77F" />
+                    <SolidColorBrush x:Key="AccentPressedBrush" Color="#318C69" />
+                    <SolidColorBrush x:Key="AccentSurfaceBrush" Color="#263D33" />
+                    <SolidColorBrush x:Key="AccentSurfaceHoverBrush" Color="#304D40" />
+                    <SolidColorBrush x:Key="AccentSurfacePressedBrush" Color="#385A4B" />
+                    <SolidColorBrush x:Key="ButtonHoverBrush" Color="#303B36" />
+                    <SolidColorBrush x:Key="ButtonPressedBrush" Color="#3A4841" />
+                    <SolidColorBrush x:Key="CodeSurfaceBrush" Color="#171F1B" />
+                    <SolidColorBrush x:Key="CountSurfaceBrush" Color="#303B36" />
+                    <SolidColorBrush x:Key="FavoriteBrush" Color="#E5A45F" />
+                    <SolidColorBrush x:Key="DangerBrush" Color="#EF837A" />
+                    <SolidColorBrush x:Key="ToastBackgroundBrush" Color="#D90E1713" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+        <Style Selector="Button">
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        <Style Selector="Window">
+            <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}" />
+        </Style>
+    </Application.Styles>
+</Application>

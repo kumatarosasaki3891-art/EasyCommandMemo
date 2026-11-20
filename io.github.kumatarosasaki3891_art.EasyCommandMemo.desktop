@@ -1,0 +1,22 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=EasyCommandMemo
+Name[ja]=簡単コマンド帳 (EasyCommandMemo)
+GenericName=Local Command Library
+GenericName[ja]=ローカルコマンド帳
+Comment=Save, search, and copy commands locally with quick search and template variables
+Comment[ja]=コマンドをローカルに保存・高速検索・変数置換してコピーできる個人用コマンド帳
+Exec=EasyCommandMemo
+Icon=io.github.kumatarosasaki3891_art.EasyCommandMemo
+Terminal=false
+Categories=Utility;Development;
+Keywords=command;cli;snippet;memo;cheat-sheet;template;quick-search;
+Keywords[ja]=コマンド;メモ;スニペット;クイック検索;変数;CLI;
+StartupWMClass=EasyCommandMemo
+Actions=QuickSearch;
+
+[Desktop Action QuickSearch]
+Name=Quick Search
+Name[ja]=クイック検索
+Exec=EasyCommandMemo --quick

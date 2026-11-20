@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Text_AppName" xml:space="preserve"><value>简易命令本</value></data>
+  <data name="Text_SearchPlaceholder" xml:space="preserve"><value>搜索命令、说明和标签</value></data>
+  <data name="Text_QuickSearch" xml:space="preserve"><value>快速搜索</value></data>
+  <data name="Text_QuickShortcutHint" xml:space="preserve"><value>Enter：复制　↑↓：选择　Ctrl+Enter：详情　Esc：关闭</value></data>
+  <data name="Text_ImportJson" xml:space="preserve"><value>导入 JSON</value></data>
+  <data name="Text_ExportJson" xml:space="preserve"><value>导出 JSON</value></data>
+  <data name="Text_ThemeToggle" xml:space="preserve"><value>切换浅色/深色主题</value></data>
+  <data name="Text_AddCommand" xml:space="preserve"><value>＋ 新建命令</value></data>
+  <data name="Text_QuickLaunchTooltip" xml:space="preserve"><value>快速搜索 (Ctrl+Shift+Space)</value></data>
+  <data name="Text_Library" xml:space="preserve"><value>命令库</value></data>
+  <data name="Text_AllCategories" xml:space="preserve"><value>全部</value></data>
+  <data name="Text_Favorites" xml:space="preserve"><value>收藏</value></data>
+  <data name="Text_FavoriteAdd" xml:space="preserve"><value>☆ 添加到收藏</value></data>
+  <data name="Text_FavoriteRemove" xml:space="preserve"><value>★ 取消收藏</value></data>
+  <data name="Text_InitialStatus" xml:space="preserve"><value>添加命令，创建个人命令库。</value></data>
+  <data name="Text_StatusSaved" xml:space="preserve"><value>命令已保存。</value></data>
+  <data name="Text_StatusDeletedPrefix" xml:space="preserve"><value> 已删除。</value></data>
+  <data name="Text_StatusFavoriteAdded" xml:space="preserve"><value>已添加到收藏。</value></data>
+  <data name="Text_StatusFavoriteRemoved" xml:space="preserve"><value>已取消收藏。</value></data>
+  <data name="Text_StatusCopied" xml:space="preserve"><value>命令已复制。</value></data>
+  <data name="Text_CopyCountTooltip" xml:space="preserve"><value>复制次数</value></data>
+  <data name="Text_StatusImported" xml:space="preserve"><value> 条命令已导入。</value></data>
+  <data name="Text_StatusExported" xml:space="preserve"><value>JSON 已导出。</value></data>
+  <data name="Text_ImportFailed" xml:space="preserve"><value>导入失败： </value></data>
+  <data name="Text_ExportFailed" xml:space="preserve"><value>导出失败： </value></data>
+  <data name="Text_Commands" xml:space="preserve"><value>命令</value></data>
+  <data name="Text_RegisteredNotes" xml:space="preserve"><value>已保存的命令</value></data>
+  <data name="Text_CopyTooltip" xml:space="preserve"><value>复制此命令</value></data>
+  <data name="Text_Copy" xml:space="preserve"><value>⧉  复制</value></data>
+  <data name="Text_Edit" xml:space="preserve"><value>编辑</value></data>
+  <data name="Text_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Text_CommandLabel" xml:space="preserve"><value>命令</value></data>
+  <data name="Text_EmptySelection" xml:space="preserve"><value>请选择命令或新建命令</value></data>
+  <data name="Text_CopyComplete" xml:space="preserve"><value>⧉  已复制</value></data>
+  <data name="Text_NoResults" xml:space="preserve"><value>没有匹配的命令</value></data>
+  <data name="Text_Faq" xml:space="preserve"><value>常见问题</value></data>
+  <data name="Text_Information" xml:space="preserve"><value>关于</value></data>
+  <data name="Text_Language" xml:space="preserve"><value>显示语言</value></data>
+  <data name="Text_Close" xml:space="preserve"><value>关闭</value></data>
+  <data name="Text_FaqTitle" xml:space="preserve"><value>常见问题</value></data>
+  <data name="Text_FaqQ1" xml:space="preserve"><value>命令保存在哪里？</value></data>
+  <data name="Text_FaqA1" xml:space="preserve"><value>命令保存在本机用户数据目录中的 SQLite 数据库。可导出 JSON 进行备份。</value></data>
+  <data name="Text_FaqQ2" xml:space="preserve"><value>应用会执行命令吗？</value></data>
+  <data name="Text_FaqA2" xml:space="preserve"><value>不会。应用只会将命令或替换变量后的命令复制到剪贴板。</value></data>
+  <data name="Text_FaqQ3" xml:space="preserve"><value>如何打开快速搜索？</value></data>
+  <data name="Text_FaqA3" xml:space="preserve"><value>点击搜索按钮或按 Ctrl+Shift+Space 打开。使用上/下方向键选择，按 Enter 复制，按 Ctrl+Enter 查看详情，按 Esc 关闭。</value></data>
+  <data name="Text_FaqQ4" xml:space="preserve"><value>如何使用模板变量？</value></data>
+  <data name="Text_FaqA4" xml:space="preserve"><value>复制命令时，为 {name} 等占位符输入值，应用会替换后再复制。</value></data>
+  <data name="Text_FaqQ5" xml:space="preserve"><value>如何将命令迁移到另一台电脑？</value></data>
+  <data name="Text_FaqA5" xml:space="preserve"><value>导出为 JSON，然后在另一台电脑上导入该文件。</value></data>
+  <data name="Text_AboutDescription" xml:space="preserve"><value>用于保存、搜索和复制命令的个人命令库。</value></data>
+  <data name="Text_VersionLabel" xml:space="preserve"><value>版本</value></data>
+  <data name="Text_DeleteConfirm" xml:space="preserve"><value>要删除所选命令吗？</value></data>
+  <data name="Text_DeleteConfirmTitle" xml:space="preserve"><value>确认删除</value></data>
+  <data name="Text_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Text_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Text_NewCommand" xml:space="preserve"><value>新建命令</value></data>
+  <data name="Text_EditCommand" xml:space="preserve"><value>编辑命令</value></data>
+  <data name="Text_TitleRequired" xml:space="preserve"><value>标题 *</value></data>
+  <data name="Text_CategoryRequired" xml:space="preserve"><value>类别 *</value></data>
+  <data name="Text_Tags" xml:space="preserve"><value>标签</value></data>
+  <data name="Text_Description" xml:space="preserve"><value>说明</value></data>
+  <data name="Text_TitlePlaceholder" xml:space="preserve"><value>例如：列出 Docker 容器</value></data>
+  <data name="Text_CategoryPlaceholder" xml:space="preserve"><value>例如：Docker、Git、Linux</value></data>
+  <data name="Text_TagsPlaceholder" xml:space="preserve"><value>逗号分隔：container, list</value></data>
+  <data name="Text_CommandPlaceholder" xml:space="preserve"><value>输入命令</value></data>
+  <data name="Text_DescriptionPlaceholder" xml:space="preserve"><value>用途或备注</value></data>
+  <data name="Text_VariableTitle" xml:space="preserve"><value>输入命令变量</value></data>
+  <data name="Text_VariablePrompt" xml:space="preserve"><value>输入命令所需的值</value></data>
+  <data name="Text_CopyPreview" xml:space="preserve"><value>将要复制的命令</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.0</value></data>
+  <data name="Text_Homepage" xml:space="preserve"><value>🌐  官方网站</value></data>
+  <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (开发者资讯)</value></data>
+  <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>仅收藏</value></data>
+</root>

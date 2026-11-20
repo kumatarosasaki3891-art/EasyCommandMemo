@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Text_AppName" xml:space="preserve"><value>簡易指令簿</value></data>
+  <data name="Text_SearchPlaceholder" xml:space="preserve"><value>搜尋指令、說明、標籤</value></data>
+  <data name="Text_QuickSearch" xml:space="preserve"><value>快速搜尋</value></data>
+  <data name="Text_QuickShortcutHint" xml:space="preserve"><value>Enter 複製　↑↓ 選擇　Ctrl+Enter 詳細資訊　Esc 關閉</value></data>
+  <data name="Text_ImportJson" xml:space="preserve"><value>匯入 JSON</value></data>
+  <data name="Text_ExportJson" xml:space="preserve"><value>匯出 JSON</value></data>
+  <data name="Text_ThemeToggle" xml:space="preserve"><value>切換深色 / 淺色模式</value></data>
+  <data name="Text_AddCommand" xml:space="preserve"><value>＋ 新增指令</value></data>
+  <data name="Text_QuickLaunchTooltip" xml:space="preserve"><value>快速搜尋 (Ctrl+Shift+Space)</value></data>
+  <data name="Text_Library" xml:space="preserve"><value>程式庫</value></data>
+  <data name="Text_AllCategories" xml:space="preserve"><value>全部</value></data>
+  <data name="Text_Favorites" xml:space="preserve"><value>我的最愛</value></data>
+  <data name="Text_FavoriteAdd" xml:space="preserve"><value>☆ 加入我的最愛</value></data>
+  <data name="Text_FavoriteRemove" xml:space="preserve"><value>★ 取消我的最愛</value></data>
+  <data name="Text_InitialStatus" xml:space="preserve"><value>新增指令來建立專屬的指令備忘錄。</value></data>
+  <data name="Text_StatusSaved" xml:space="preserve"><value>指令已儲存。</value></data>
+  <data name="Text_StatusDeletedPrefix" xml:space="preserve"><value> 已被刪除。</value></data>
+  <data name="Text_StatusFavoriteAdded" xml:space="preserve"><value>已加入我的最愛。</value></data>
+  <data name="Text_StatusFavoriteRemoved" xml:space="preserve"><value>已從我的最愛移除。</value></data>
+  <data name="Text_StatusCopied" xml:space="preserve"><value>指令已複製。</value></data>
+  <data name="Text_CopyCountTooltip" xml:space="preserve"><value>複製次數</value></data>
+  <data name="Text_StatusImported" xml:space="preserve"><value> 筆指令已匯入。</value></data>
+  <data name="Text_StatusExported" xml:space="preserve"><value>JSON 已匯出。</value></data>
+  <data name="Text_ImportFailed" xml:space="preserve"><value>匯入失敗: </value></data>
+  <data name="Text_ExportFailed" xml:space="preserve"><value>匯出失敗: </value></data>
+  <data name="Text_Commands" xml:space="preserve"><value>指令</value></data>
+  <data name="Text_RegisteredNotes" xml:space="preserve"><value>已儲存的指令</value></data>
+  <data name="Text_CopyTooltip" xml:space="preserve"><value>複製此指令</value></data>
+  <data name="Text_Copy" xml:space="preserve"><value>⧉  複製</value></data>
+  <data name="Text_Edit" xml:space="preserve"><value>編輯</value></data>
+  <data name="Text_Delete" xml:space="preserve"><value>刪除</value></data>
+  <data name="Text_CommandLabel" xml:space="preserve"><value>指令</value></data>
+  <data name="Text_EmptySelection" xml:space="preserve"><value>請選取指令或新增指令</value></data>
+  <data name="Text_CopyComplete" xml:space="preserve"><value>⧉  已複製</value></data>
+  <data name="Text_NoResults" xml:space="preserve"><value>沒有相符的指令</value></data>
+  <data name="Text_Faq" xml:space="preserve"><value>常見問題</value></data>
+  <data name="Text_Information" xml:space="preserve"><value>應用程式資訊</value></data>
+  <data name="Text_Language" xml:space="preserve"><value>顯示語言</value></data>
+  <data name="Text_Close" xml:space="preserve"><value>關閉</value></data>
+  <data name="Text_FaqTitle" xml:space="preserve"><value>常見問題與解答</value></data>
+  <data name="Text_FaqQ1" xml:space="preserve"><value>指令儲存在哪裡？</value></data>
+  <data name="Text_FaqA1" xml:space="preserve"><value>儲存在本機使用者資料夾的 SQLite 資料庫中。您可以透過匯出 JSON 建立備份。</value></data>
+  <data name="Text_FaqQ2" xml:space="preserve"><value>應用程式會執行指令嗎？</value></data>
+  <data name="Text_FaqA2" xml:space="preserve"><value>不會。它只會將指令（或代入範本變數後的字串）複製到剪貼簿。</value></data>
+  <data name="Text_FaqQ3" xml:space="preserve"><value>如何開啟快速搜尋？</value></data>
+  <data name="Text_FaqA3" xml:space="preserve"><value>按下應用程式內的搜尋按鈕或按下 Ctrl+Shift+Space 即可開啟。使用 ↑↓ 選擇、Enter 複製、Ctrl+Enter 檢視詳細資訊、Esc 關閉。</value></data>
+  <data name="Text_FaqQ4" xml:space="preserve"><value>範本變數如何運作？</value></data>
+  <data name="Text_FaqA4" xml:space="preserve"><value>複製指令時，若指令內含有 {name} 這類預留位置，輸入對應數值即可自動替換後複製。</value></data>
+  <data name="Text_FaqQ5" xml:space="preserve"><value>如何將指令轉移到另一台電腦？</value></data>
+  <data name="Text_FaqA5" xml:space="preserve"><value>將指令匯出為 JSON 檔案，然後在另一台電腦上匯入該檔案。</value></data>
+  <data name="Text_AboutDescription" xml:space="preserve"><value>用於儲存、搜尋與複製指令的個人指令庫。</value></data>
+  <data name="Text_VersionLabel" xml:space="preserve"><value>版本</value></data>
+  <data name="Text_DeleteConfirm" xml:space="preserve"><value>確定要刪除所選的指令嗎？</value></data>
+  <data name="Text_DeleteConfirmTitle" xml:space="preserve"><value>確認刪除</value></data>
+  <data name="Text_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Text_Save" xml:space="preserve"><value>儲存</value></data>
+  <data name="Text_NewCommand" xml:space="preserve"><value>新增指令</value></data>
+  <data name="Text_EditCommand" xml:space="preserve"><value>編輯指令</value></data>
+  <data name="Text_TitleRequired" xml:space="preserve"><value>標題 *</value></data>
+  <data name="Text_CategoryRequired" xml:space="preserve"><value>分類 *</value></data>
+  <data name="Text_Tags" xml:space="preserve"><value>標籤</value></data>
+  <data name="Text_Description" xml:space="preserve"><value>說明</value></data>
+  <data name="Text_TitlePlaceholder" xml:space="preserve"><value>例：列出 Docker 容器</value></data>
+  <data name="Text_CategoryPlaceholder" xml:space="preserve"><value>例：Docker、Git、Linux</value></data>
+  <data name="Text_TagsPlaceholder" xml:space="preserve"><value>逗號分隔：container, list</value></data>
+  <data name="Text_CommandPlaceholder" xml:space="preserve"><value>輸入要執行的指令</value></data>
+  <data name="Text_DescriptionPlaceholder" xml:space="preserve"><value>用途或備註說明</value></data>
+  <data name="Text_VariableTitle" xml:space="preserve"><value>輸入指令變數</value></data>
+  <data name="Text_VariablePrompt" xml:space="preserve"><value>請輸入指令的值</value></data>
+  <data name="Text_CopyPreview" xml:space="preserve"><value>複製的指令預覽</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.0</value></data>
+  <data name="Text_Homepage" xml:space="preserve"><value>🌐  官方網站</value></data>
+  <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (開發者資訊)</value></data>
+  <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>僅顯示我的最愛</value></data>
+</root>

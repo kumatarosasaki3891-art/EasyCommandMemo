@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="EasyCommandMemo.Views.QuickLauncherWindow"
+        x:CompileBindings="False"
+        Title="{DynamicResource Text_QuickSearch}"
+        Icon="/Assets/app.ico"
+        Width="600" Height="560" MinWidth="480" MinHeight="360"
+        CanResize="False" ShowInTaskbar="False"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource WindowBackgroundBrush}">
+
+    <Grid RowDefinitions="Auto,Auto,*" Margin="18" RowSpacing="12">
+        <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,Auto" RowSpacing="3" ColumnSpacing="12">
+            <TextBlock Text="{DynamicResource Text_QuickSearch}" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextBrush}" VerticalAlignment="Center" />
+            <CheckBox x:Name="FavoritesOnlyCheckBox"
+                      Grid.Column="1"
+                      TabIndex="1"
+                      IsChecked="{Binding QuickFavoritesOnly, Mode=TwoWay}"
+                      VerticalAlignment="Center"
+                      FontSize="13">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="★" Foreground="{DynamicResource FavoriteBrush}" VerticalAlignment="Center" />
+                    <TextBlock Text="{DynamicResource Text_QuickFavoritesOnly}" Foreground="{DynamicResource PrimaryTextBrush}" VerticalAlignment="Center" />
+                </StackPanel>
+            </CheckBox>
+            <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="{DynamicResource Text_QuickShortcutHint}" FontSize="11" Foreground="{DynamicResource MutedTextBrush}" />
+        </Grid>
+        <TextBox x:Name="QuickSearchBox" Grid.Row="1" TabIndex="0" Text="{Binding QuickSearchQuery, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PlaceholderText="{DynamicResource Text_SearchPlaceholder}" Height="44" FontSize="16" VerticalContentAlignment="Center" />
+        <Grid Grid.Row="2">
+            <ListBox x:Name="QuickResults" TabIndex="2" ItemsSource="{Binding QuickCommands}" SelectedItem="{Binding QuickSelectedCommand, Mode=TwoWay}" BorderThickness="0" Background="Transparent">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="12" Margin="0,0,0,8" Background="{DynamicResource SurfaceBackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6">
+                            <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,Auto" RowSpacing="7">
+                                <TextBlock Text="{Binding Title}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" TextTrimming="CharacterEllipsis" />
+                                <TextBlock Grid.Column="1" Text="{Binding CopyCount}" FontSize="11" Foreground="{DynamicResource MutedTextBrush}" VerticalAlignment="Center" HorizontalAlignment="Right" ToolTip.Tip="{DynamicResource Text_CopyCountTooltip}" />
+                                <TextBlock Grid.Row="1" Text="{Binding CommandText}" FontFamily="Cascadia Code, Consolas, monospace" FontSize="12" Foreground="{DynamicResource SecondaryTextBrush}" TextWrapping="Wrap" MaxLines="2" />
+                                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Spacing="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="12,0,0,0">
+                                    <TextBlock Text="★" IsVisible="{Binding IsFavorite}" FontSize="11" Foreground="{DynamicResource FavoriteBrush}" VerticalAlignment="Center" />
+                                    <TextBlock Text="{Binding Category}" FontSize="10" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock x:Name="EmptyMessage" Text="{DynamicResource Text_NoResults}" IsVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource MutedTextBrush}" />
+            <Border x:Name="CopyToast" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,12" Padding="16,10" CornerRadius="8" Background="{DynamicResource ToastBackgroundBrush}" IsVisible="False" IsHitTestVisible="False">
+                <TextBlock Text="{DynamicResource Text_CopyComplete}" Foreground="#FFFFFF" FontSize="13" FontWeight="SemiBold" />
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

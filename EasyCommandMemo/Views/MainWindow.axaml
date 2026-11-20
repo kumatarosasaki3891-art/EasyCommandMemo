@@ -1,0 +1,177 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:EasyCommandMemo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1240" d:DesignHeight="780"
+        x:Class="EasyCommandMemo.Views.MainWindow"
+        x:CompileBindings="False"
+        Title="{DynamicResource Text_AppName}"
+        Icon="/Assets/app.ico"
+        Width="1240" Height="780" MinWidth="980" MinHeight="640"
+        Background="{DynamicResource WindowBackgroundBrush}">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.fs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="MinHeight" Value="36" />
+        </Style>
+        <Style Selector="Button:pointerover">
+            <Setter Property="Background" Value="{DynamicResource ButtonHoverBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextBrush}" />
+        </Style>
+        <Style Selector="Button:pressed">
+            <Setter Property="Background" Value="{DynamicResource ButtonPressedBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextBrush}" />
+        </Style>
+        <Style Selector="Button:disabled">
+            <Setter Property="Opacity" Value="0.5" />
+        </Style>
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="{DynamicResource AccentBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryButtonForegroundBrush}" />
+        </Style>
+        <Style Selector="Button.primary:pointerover">
+            <Setter Property="Background" Value="{DynamicResource AccentHoverBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryButtonForegroundBrush}" />
+        </Style>
+        <Style Selector="Button.primary:pressed">
+            <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryButtonForegroundBrush}" />
+        </Style>
+        <Style Selector="Button.favorite">
+            <Setter Property="Background" Value="{DynamicResource AccentSurfaceBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
+        </Style>
+        <Style Selector="Button.favorite:pointerover">
+            <Setter Property="Background" Value="{DynamicResource AccentSurfaceHoverBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
+        </Style>
+        <Style Selector="Button.favorite:pressed">
+            <Setter Property="Background" Value="{DynamicResource AccentSurfacePressedBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
+        </Style>
+        <Style Selector="Button.icon-button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+            <Setter Property="CornerRadius" Value="6" />
+        </Style>
+        <Style Selector="Button.icon-button:pointerover">
+            <Setter Property="Background" Value="{DynamicResource AccentBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryButtonForegroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource AccentHoverBrush}" />
+        </Style>
+        <Style Selector="Button.icon-button:pressed">
+            <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryButtonForegroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource AccentPressedBrush}" />
+        </Style>
+    </Window.Styles>
+
+        <Grid RowDefinitions="68,*" ColumnDefinitions="230,390,*">
+            <Border Grid.Row="0" Grid.ColumnSpan="3" Background="{DynamicResource SurfaceBackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1">
+                <Grid ColumnDefinitions="48,220,*,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Margin="22,0" ColumnSpacing="10">
+                    <Border Width="38" Height="38" CornerRadius="8" ClipToBounds="True" VerticalAlignment="Center">
+                        <Image Source="/Assets/icon.png" Width="38" Height="38" Stretch="UniformToFill" />
+                    </Border>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="1">
+                        <TextBlock Text="{DynamicResource Text_AppName}" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextBrush}" />
+                        <TextBlock Text="LOCAL COMMAND LIBRARY" FontSize="9" Foreground="{DynamicResource MutedTextBrush}" />
+                    </StackPanel>
+                    <TextBox x:Name="SearchBox" Grid.Column="2" Text="{Binding SearchQuery, Mode=TwoWay}" PlaceholderText="{DynamicResource Text_SearchPlaceholder}" Height="38" VerticalContentAlignment="Center" VerticalAlignment="Center" />
+                    <Button x:Name="QuickLaunchButton" Classes="icon-button" Grid.Column="3" Content="⌕" ToolTip.Tip="{DynamicResource Text_QuickLaunchTooltip}" Height="38" Width="40" VerticalAlignment="Center" />
+                    <Button x:Name="ImportButton" Grid.Column="4" Content="{DynamicResource Text_ImportJson}" Height="38" Padding="12,0" VerticalAlignment="Center" />
+                    <Button x:Name="ExportButton" Grid.Column="5" Content="{DynamicResource Text_ExportJson}" Height="38" Padding="12,0" VerticalAlignment="Center" />
+                    <ComboBox x:Name="LanguageSelector" Grid.Column="6" Width="148" Height="38" VerticalAlignment="Center" ToolTip.Tip="{DynamicResource Text_Language}" />
+                    <Button x:Name="ThemeButton" Classes="icon-button" Grid.Column="7" Content="◐" ToolTip.Tip="{DynamicResource Text_ThemeToggle}" Height="38" Width="40" VerticalAlignment="Center" />
+                    <Button x:Name="FaqButton" Classes="icon-button" Grid.Column="8" Content="?" ToolTip.Tip="{DynamicResource Text_Faq}" Height="38" Width="40" VerticalAlignment="Center" />
+                    <Button x:Name="InformationButton" Classes="icon-button" Grid.Column="9" Content="ⓘ" ToolTip.Tip="{DynamicResource Text_Information}" Height="38" Width="40" VerticalAlignment="Center" />
+                    <Button x:Name="AddButton" Grid.Column="10" Classes="primary" Content="{DynamicResource Text_AddCommand}" Height="38" Padding="12,0" VerticalAlignment="Center" />
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="0" Background="{DynamicResource SidebarBackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,1,0">
+                <Grid RowDefinitions="Auto,*,Auto" Margin="16,22,12,16">
+                    <TextBlock Text="{DynamicResource Text_Library}" FontSize="11" FontWeight="Bold" Foreground="{DynamicResource MutedTextBrush}" Margin="8,0,0,12" />
+                    <ListBox Grid.Row="1" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" BorderThickness="0" Background="Transparent">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" Padding="10,9" FontSize="14" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <TextBlock Grid.Row="2" Text="{Binding StatusMessage}" TextWrapping="Wrap" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" Margin="8,12,8,0" />
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="1" Grid.Column="1" RowDefinitions="Auto,*" Margin="18,22,14,16">
+                <Grid ColumnDefinitions="*,Auto" Margin="4,0,4,14">
+                    <StackPanel Spacing="2">
+                        <TextBlock Text="{DynamicResource Text_Commands}" FontSize="19" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextBrush}" />
+                        <TextBlock Text="{DynamicResource Text_RegisteredNotes}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" />
+                    </StackPanel>
+                    <Border Grid.Column="1" Background="{DynamicResource CountSurfaceBrush}" CornerRadius="10" Padding="10,5" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding FilteredCount}" FontSize="12" FontWeight="Bold" Foreground="{DynamicResource SecondaryTextBrush}" />
+                    </Border>
+                </Grid>
+                <ListBox x:Name="CommandList" Grid.Row="1" ItemsSource="{Binding FilteredCommands}" SelectedItem="{Binding SelectedCommand, Mode=TwoWay}" BorderThickness="0" Background="Transparent">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Padding="13" Margin="0,0,0,9" Background="{DynamicResource SurfaceBackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6">
+                                <StackPanel Spacing="8">
+                                    <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="8">
+                                        <TextBlock Text="{Binding Title}" FontSize="15" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}" TextTrimming="CharacterEllipsis" />
+                                        <TextBlock Grid.Column="1" Text="{Binding CopyCount}" FontSize="11" Foreground="{DynamicResource MutedTextBrush}" VerticalAlignment="Center" ToolTip.Tip="{DynamicResource Text_CopyCountTooltip}" />
+                                        <Button Grid.Column="2" x:Name="CardCopyButton" Classes="icon-button" Content="⧉" Width="34" Height="30" MinHeight="30" Padding="0" ToolTip.Tip="{DynamicResource Text_CopyTooltip}" />
+                                    </Grid>
+                                    <StackPanel Orientation="Horizontal" Spacing="6">
+                                        <TextBlock Text="{Binding Category}" FontSize="11" FontWeight="Bold" Foreground="{DynamicResource AccentBrush}" />
+                                        <TextBlock Text="★" IsVisible="{Binding IsFavorite}" Foreground="{DynamicResource FavoriteBrush}" />
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding CommandText}" FontFamily="Cascadia Code, Consolas, monospace" FontSize="11" Foreground="{DynamicResource SecondaryTextBrush}" TextWrapping="Wrap" MaxLines="2" />
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+
+            <Border Grid.Row="1" Grid.Column="2" Background="{DynamicResource SurfaceBackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,0,0">
+                <Grid RowDefinitions="Auto,Auto,Auto,*,Auto" Margin="30,28,30,22" RowSpacing="16">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <TextBlock Text="{Binding SelectedCommand.Title}" IsVisible="{Binding HasSelection}" FontSize="24" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextBrush}" TextWrapping="Wrap" />
+                        <Button x:Name="FavoriteButton" Grid.Column="1" Classes="favorite" Content="{Binding FavoriteLabel}" IsVisible="{Binding HasSelection}" VerticalAlignment="Top" Padding="14,0" />
+                    </Grid>
+                    <StackPanel Grid.Row="1" IsVisible="{Binding HasSelection}" Orientation="Horizontal" Spacing="10">
+                        <Border Background="{DynamicResource AccentSurfaceBrush}" CornerRadius="4" Padding="9,5">
+                            <TextBlock Text="{Binding SelectedCommand.Category}" FontSize="12" Foreground="{DynamicResource AccentBrush}" />
+                        </Border>
+                        <TextBlock Text="{Binding SelectedCommand.Tags}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <TextBlock Grid.Row="2" IsVisible="{Binding HasSelection}" Text="{Binding SelectedCommand.Description}" TextWrapping="Wrap" FontSize="14" Foreground="{DynamicResource SecondaryTextBrush}" />
+                    <Grid Grid.Row="3" IsVisible="{Binding HasSelection}" RowDefinitions="Auto,*" RowSpacing="8">
+                        <TextBlock Text="{DynamicResource Text_CommandLabel}" FontSize="11" FontWeight="Bold" Foreground="{DynamicResource MutedTextBrush}" />
+                        <TextBox Grid.Row="1" Text="{Binding SelectedCommand.CommandText}" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" FontFamily="Cascadia Code, Consolas, monospace" FontSize="13" Background="{DynamicResource CodeSurfaceBrush}" Foreground="{DynamicResource SecondaryTextBrush}" BorderThickness="0" Padding="16" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+                    </Grid>
+                    <TextBlock Grid.Row="3" IsVisible="{Binding HasNoSelection}" Text="{DynamicResource Text_EmptySelection}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="15" Foreground="{DynamicResource MutedTextBrush}" />
+                    <Grid Grid.Row="4" IsVisible="{Binding HasSelection}" ColumnDefinitions="*,Auto,Auto" ColumnSpacing="10">
+                        <Button x:Name="CopyButton" Classes="primary" Content="{DynamicResource Text_Copy}" Height="40" HorizontalAlignment="Left" Padding="18,0" />
+                        <Button x:Name="EditButton" Grid.Column="1" Content="{DynamicResource Text_Edit}" Height="40" Padding="16,0" />
+                        <Button x:Name="DeleteButton" Grid.Column="2" Content="{DynamicResource Text_Delete}" Height="40" Padding="16,0" Foreground="{DynamicResource DangerBrush}" />
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border x:Name="CopyToast" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,82,24,0" Padding="18,12" CornerRadius="8" Background="{DynamicResource ToastBackgroundBrush}" IsVisible="False" IsHitTestVisible="False">
+                <TextBlock Text="{DynamicResource Text_CopyComplete}" Foreground="#FFFFFF" FontSize="13" FontWeight="SemiBold" />
+            </Border>
+        </Grid>
+    </Window>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Text_AppName" xml:space="preserve"><value>Sổ tay lệnh</value></data>
+  <data name="Text_SearchPlaceholder" xml:space="preserve"><value>Tìm kiếm lệnh, mô tả, thẻ</value></data>
+  <data name="Text_QuickSearch" xml:space="preserve"><value>Tìm kiếm nhanh</value></data>
+  <data name="Text_QuickShortcutHint" xml:space="preserve"><value>Enter: Sao chép   ↑↓: Chọn   Ctrl+Enter: Chi tiết   Esc: Đóng</value></data>
+  <data name="Text_ImportJson" xml:space="preserve"><value>Nhập JSON</value></data>
+  <data name="Text_ExportJson" xml:space="preserve"><value>Xuất JSON</value></data>
+  <data name="Text_ThemeToggle" xml:space="preserve"><value>Chuyển đổi giao diện Sáng / Tối</value></data>
+  <data name="Text_AddCommand" xml:space="preserve"><value>＋ Thêm lệnh mới</value></data>
+  <data name="Text_QuickLaunchTooltip" xml:space="preserve"><value>Tìm kiếm nhanh (Ctrl+Shift+Space)</value></data>
+  <data name="Text_Library" xml:space="preserve"><value>Thư viện</value></data>
+  <data name="Text_AllCategories" xml:space="preserve"><value>Tất cả</value></data>
+  <data name="Text_Favorites" xml:space="preserve"><value>Mục yêu thích</value></data>
+  <data name="Text_FavoriteAdd" xml:space="preserve"><value>☆ Thêm vào yêu thích</value></data>
+  <data name="Text_FavoriteRemove" xml:space="preserve"><value>★ Bỏ yêu thích</value></data>
+  <data name="Text_InitialStatus" xml:space="preserve"><value>Thêm các lệnh để xây dựng thư viện lệnh cá nhân của bạn.</value></data>
+  <data name="Text_StatusSaved" xml:space="preserve"><value>Đã lưu lệnh.</value></data>
+  <data name="Text_StatusDeletedPrefix" xml:space="preserve"><value> đã được xóa.</value></data>
+  <data name="Text_StatusFavoriteAdded" xml:space="preserve"><value>Đã thêm vào mục yêu thích.</value></data>
+  <data name="Text_StatusFavoriteRemoved" xml:space="preserve"><value>Đã xóa khỏi mục yêu thích.</value></data>
+  <data name="Text_StatusCopied" xml:space="preserve"><value>Đã sao chép lệnh vào clipboard.</value></data>
+  <data name="Text_CopyCountTooltip" xml:space="preserve"><value>Số lần sao chép</value></data>
+  <data name="Text_StatusImported" xml:space="preserve"><value> lệnh đã được nhập thành công.</value></data>
+  <data name="Text_StatusExported" xml:space="preserve"><value>Đã xuất tệp JSON thành công.</value></data>
+  <data name="Text_ImportFailed" xml:space="preserve"><value>Nhập thất bại: </value></data>
+  <data name="Text_ExportFailed" xml:space="preserve"><value>Xuất thất bại: </value></data>
+  <data name="Text_Commands" xml:space="preserve"><value>Lệnh</value></data>
+  <data name="Text_RegisteredNotes" xml:space="preserve"><value>Lệnh đã lưu</value></data>
+  <data name="Text_CopyTooltip" xml:space="preserve"><value>Sao chép lệnh này</value></data>
+  <data name="Text_Copy" xml:space="preserve"><value>⧉  Sao chép</value></data>
+  <data name="Text_Edit" xml:space="preserve"><value>Chỉnh sửa</value></data>
+  <data name="Text_Delete" xml:space="preserve"><value>Xóa</value></data>
+  <data name="Text_CommandLabel" xml:space="preserve"><value>Lệnh</value></data>
+  <data name="Text_EmptySelection" xml:space="preserve"><value>Hãy chọn một lệnh hoặc thêm lệnh mới</value></data>
+  <data name="Text_CopyComplete" xml:space="preserve"><value>⧉  Đã sao chép</value></data>
+  <data name="Text_NoResults" xml:space="preserve"><value>Không tìm thấy lệnh phù hợp</value></data>
+  <data name="Text_Faq" xml:space="preserve"><value>FAQ</value></data>
+  <data name="Text_Information" xml:space="preserve"><value>Giới thiệu</value></data>
+  <data name="Text_Language" xml:space="preserve"><value>Ngôn ngữ</value></data>
+  <data name="Text_Close" xml:space="preserve"><value>Đóng</value></data>
+  <data name="Text_FaqTitle" xml:space="preserve"><value>Câu hỏi thường gặp</value></data>
+  <data name="Text_FaqQ1" xml:space="preserve"><value>Các lệnh được lưu trữ ở đâu?</value></data>
+  <data name="Text_FaqA1" xml:space="preserve"><value>Các lệnh được lưu trong cơ sở dữ liệu SQLite tại thư mục dữ liệu người dùng cục bộ. Bạn có thể xuất JSON để sao lưu.</value></data>
+  <data name="Text_FaqQ2" xml:space="preserve"><value>Ứng dụng có tự động thực thi lệnh không?</value></data>
+  <data name="Text_FaqA2" xml:space="preserve"><value>Không. Ứng dụng chỉ sao chép lệnh (hoặc lệnh đã thay thế biến mẫu) vào khay nhớ tạm (clipboard).</value></data>
+  <data name="Text_FaqQ3" xml:space="preserve"><value>Làm thế nào để mở Tìm kiếm nhanh?</value></data>
+  <data name="Text_FaqA3" xml:space="preserve"><value>Nhấn nút tìm kiếm trên ứng dụng hoặc phím tắt Ctrl+Shift+Space. Dùng ↑↓ để chọn, Enter để sao chép, Ctrl+Enter để xem chi tiết, Esc để đóng.</value></data>
+  <data name="Text_FaqQ4" xml:space="preserve"><value>Biến mẫu hoạt động như thế nào?</value></data>
+  <data name="Text_FaqA4" xml:space="preserve"><value>Khi sao chép, nếu lệnh chứa biến như {name}, bạn có thể nhập giá trị để tự động thay thế trước khi sao chép.</value></data>
+  <data name="Text_FaqQ5" xml:space="preserve"><value>Làm sao để chuyển lệnh sang máy tính khác?</value></data>
+  <data name="Text_FaqA5" xml:space="preserve"><value>Hãy xuất dữ liệu thành tệp JSON, sau đó nhập tệp đó vào máy tính mới.</value></data>
+  <data name="Text_AboutDescription" xml:space="preserve"><value>Thư viện cá nhân giúp lưu trữ, tìm kiếm và sao chép các lệnh thuận tiện.</value></data>
+  <data name="Text_VersionLabel" xml:space="preserve"><value>Phiên bản</value></data>
+  <data name="Text_DeleteConfirm" xml:space="preserve"><value>Bạn có chắc chắn muốn xóa lệnh đã chọn?</value></data>
+  <data name="Text_DeleteConfirmTitle" xml:space="preserve"><value>Xác nhận xóa</value></data>
+  <data name="Text_Cancel" xml:space="preserve"><value>Hủy</value></data>
+  <data name="Text_Save" xml:space="preserve"><value>Lưu</value></data>
+  <data name="Text_NewCommand" xml:space="preserve"><value>Thêm lệnh</value></data>
+  <data name="Text_EditCommand" xml:space="preserve"><value>Chỉnh sửa lệnh</value></data>
+  <data name="Text_TitleRequired" xml:space="preserve"><value>Tiêu đề *</value></data>
+  <data name="Text_CategoryRequired" xml:space="preserve"><value>Danh mục *</value></data>
+  <data name="Text_Tags" xml:space="preserve"><value>Thẻ</value></data>
+  <data name="Text_Description" xml:space="preserve"><value>Mô tả</value></data>
+  <data name="Text_TitlePlaceholder" xml:space="preserve"><value>Ví dụ: Liệt kê các container Docker</value></data>
+  <data name="Text_CategoryPlaceholder" xml:space="preserve"><value>Ví dụ: Docker, Git, Linux</value></data>
+  <data name="Text_TagsPlaceholder" xml:space="preserve"><value>Phân tách bằng dấu phẩy: container, list</value></data>
+  <data name="Text_CommandPlaceholder" xml:space="preserve"><value>Nhập lệnh cần thực thi</value></data>
+  <data name="Text_DescriptionPlaceholder" xml:space="preserve"><value>Mục đích sử dụng hoặc ghi chú</value></data>
+  <data name="Text_VariableTitle" xml:space="preserve"><value>Nhập biến cho lệnh</value></data>
+  <data name="Text_VariablePrompt" xml:space="preserve"><value>Nhập giá trị cho lệnh</value></data>
+  <data name="Text_CopyPreview" xml:space="preserve"><value>Xem trước lệnh được sao chép</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.0</value></data>
+  <data name="Text_Homepage" xml:space="preserve"><value>🌐  Trang chủ</value></data>
+  <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (Thông tin nhà phát triển)</value></data>
+  <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>Chỉ mục yêu thích</value></data>
+</root>
