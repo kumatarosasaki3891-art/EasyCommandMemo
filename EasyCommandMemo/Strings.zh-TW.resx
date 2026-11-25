@@ -74,7 +74,7 @@
   <data name="Text_VariableTitle" xml:space="preserve"><value>輸入指令變數</value></data>
   <data name="Text_VariablePrompt" xml:space="preserve"><value>請輸入指令的值</value></data>
   <data name="Text_CopyPreview" xml:space="preserve"><value>複製的指令預覽</value></data>
-  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.0</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.1</value></data>
   <data name="Text_Homepage" xml:space="preserve"><value>🌐  官方網站</value></data>
   <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (開發者資訊)</value></data>
   <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>僅顯示我的最愛</value></data>

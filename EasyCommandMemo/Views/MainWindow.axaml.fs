@@ -184,7 +184,7 @@ type MainWindow() as this =
             | Some version -> $"%d{version.Major}.%d{version.Minor}.%d{version.Build}"
             | None ->
                 let localized = Localization.get "Text_InformationVersion"
-                if localized = "Text_InformationVersion" then "1.1.0" else localized
+                if localized = "Text_InformationVersion" then "1.1.1" else localized
 
     let showInformation () =
         let dialog = Window()
