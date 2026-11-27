@@ -74,7 +74,7 @@
   <data name="Text_VariableTitle" xml:space="preserve"><value>명령어 변수 입력</value></data>
   <data name="Text_VariablePrompt" xml:space="preserve"><value>명령어에 사용할 값을 입력하세요</value></data>
   <data name="Text_CopyPreview" xml:space="preserve"><value>복사될 명령어</value></data>
-  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.1</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.2</value></data>
   <data name="Text_Homepage" xml:space="preserve"><value>🌐  홈페이지</value></data>
   <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (개발자 정보)</value></data>
   <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>즐겨찾기만</value></data>

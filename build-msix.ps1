@@ -40,7 +40,7 @@
 param(
     [string]$Configuration = "Release",
     [string]$Runtime = "win-x64",
-    [string]$Version = "1.1.1.0",
+    [string]$Version = "1.1.2.0",
     [string]$PackageName = "XXXX",
     [string]$Publisher = "CN=XXXX",
     [string]$PublisherDisplayName = "XXXX",
@@ -91,12 +91,14 @@ $stagingDir = Join-Path $distDir "msix-staging"
 $outputMsix = Join-Path $distDir "EasyCommandMemo-$Version-$Runtime.msix"
 
 if (!(Test-Path $distDir)) { New-Item -ItemType Directory -Path $distDir | Out-Null }
+if (!$SkipPublish -and (Test-Path $publishDir)) { Remove-Item -Recurse -Force $publishDir }
 if (Test-Path $stagingDir) { Remove-Item -Recurse -Force $stagingDir }
 New-Item -ItemType Directory -Path $stagingDir | Out-Null
 
 # 3. dotnet publish の実行
 if (!$SkipPublish) {
-    Write-Host "`n[1/5] dotnet publish を実行中 (自己完結型バイナリのビルド)..." -ForegroundColor Cyan
+    $buildTypeLabel = if ($SelfContained) { "自己完結型バイナリ" } else { "フレームワーク依存バイナリ" }
+    Write-Host "`n[1/5] dotnet publish を実行中 ($buildTypeLabel のビルド)..." -ForegroundColor Cyan
     $selfContainedArg = if ($SelfContained) { "--self-contained true" } else { "--self-contained false" }
     $publishCmd = "dotnet publish `"$fsprojPath`" -c $Configuration -r $Runtime $selfContainedArg -o `"$publishDir`" -p:PublishSingleFile=false"
     Write-Host "実行コマンド: $publishCmd"
@@ -109,6 +111,7 @@ if (!$SkipPublish) {
 # 4. ステージング領域へのファイル配置
 Write-Host "`n[2/5] パッケージ ステージング領域を準備中..." -ForegroundColor Cyan
 Copy-Item -Path "$publishDir\*" -Destination $stagingDir -Recurse -Force
+Get-ChildItem -Path $stagingDir -Filter "*.pdb" -Recurse | Remove-Item -Force
 
 # Assets/Store を配置
 $stagingAssetsStore = Join-Path $stagingDir "Assets\Store"
@@ -180,38 +183,26 @@ if ($SignForTesting) {
 
     $pfxPath = Join-Path $distDir "TestCert.pfx"
     $cerPath = Join-Path $distDir "TestCert.cer"
-    $pfxPassword = "TestPassword123!"
+    $pfxPassword = ConvertTo-SecureString -String "TestPassword123!" -Force -AsPlainText
 
-    # 証明書が未作成なら .NET 暗号化ライブラリで生成 (OSストア非依存)
     if (!(Test-Path $pfxPath) -or !(Test-Path $cerPath)) {
-        Write-Host "テスト用証明書を生成しています..."
-        Add-Type -AssemblyName System.Security
-        $rsa = [System.Security.Cryptography.RSA]::Create(2048)
-        $req = New-Object System.Security.Cryptography.X509Certificates.CertificateRequest(
-            $certSubject,
-            $rsa,
-            [System.Security.Cryptography.HashAlgorithmName]::SHA256,
-            [System.Security.Cryptography.RSASignaturePadding]::Pkcs1
-        )
-        $ext = New-Object System.Security.Cryptography.X509Certificates.X509EnhancedKeyUsageExtension(
-            (New-Object System.Security.Cryptography.OidCollection),
-            $false
-        )
-        $ext.EnhancedKeyUsages.Add((New-Object System.Security.Cryptography.Oid("1.3.6.1.5.5.7.3.3"))) | Out-Null
-        $req.CertificateExtensions.Add($ext) | Out-Null
-        $cert = $req.CreateSelfSigned([System.DateTimeOffset]::UtcNow.AddDays(-1), [System.DateTimeOffset]::UtcNow.AddYears(5))
-        
-        $pfxBytes = $cert.Export([System.Security.Cryptography.X509Certificates.X509ContentType]::Pfx, $pfxPassword)
-        [System.IO.File]::WriteAllBytes($pfxPath, $pfxBytes)
-        $cerBytes = $cert.Export([System.Security.Cryptography.X509Certificates.X509ContentType]::Cert)
-        [System.IO.File]::WriteAllBytes($cerPath, $cerBytes)
+        Write-Host "テスト用コード署名証明書を生成しています..."
+        $cert = New-SelfSignedCertificate `
+            -Type Custom `
+            -Subject $certSubject `
+            -KeyUsage DigitalSignature `
+            -FriendlyName "EasyCommandMemo Test Cert" `
+            -CertStoreLocation "Cert:\CurrentUser\My" `
+            -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.3", "2.5.29.19={text}")
+
+        Export-PfxCertificate -Cert $cert -FilePath $pfxPath -Password $pfxPassword | Out-Null
+        Export-Certificate -Cert $cert -FilePath $cerPath | Out-Null
+        Remove-Item "Cert:\CurrentUser\My\$($cert.Thumbprint)" -Force
     }
 
-    # signtool による署名
-    & $signTool sign /fd SHA256 /a /f "$pfxPath" /p $pfxPassword "$outputMsix"
+    & $signTool sign /fd SHA256 /a /f "$pfxPath" /p "TestPassword123!" "$outputMsix"
     if ($LASTEXITCODE -eq 0) {
         Write-Host "テスト署名に成功しました！" -ForegroundColor Green
-        Write-Host "※PC上で直接ダブルクリックしてインストールする場合は、生成された $cerPath を「信頼されたルート証明機関」に一度インポートしてください。" -ForegroundColor Yellow
     }
 }
 

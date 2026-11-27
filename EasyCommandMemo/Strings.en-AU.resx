@@ -74,7 +74,7 @@
   <data name="Text_VariableTitle" xml:space="preserve"><value>Enter command variables</value></data>
   <data name="Text_VariablePrompt" xml:space="preserve"><value>Enter values for the command</value></data>
   <data name="Text_CopyPreview" xml:space="preserve"><value>Command to copy</value></data>
-  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.1</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.2</value></data>
   <data name="Text_Homepage" xml:space="preserve"><value>🌐  Website</value></data>
   <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (Developer)</value></data>
   <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>Favourites only</value></data>

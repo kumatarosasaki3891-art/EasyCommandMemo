@@ -74,7 +74,7 @@
   <data name="Text_VariableTitle" xml:space="preserve"><value>コマンドの変数を入力</value></data>
   <data name="Text_VariablePrompt" xml:space="preserve"><value>コマンドの値を入力</value></data>
   <data name="Text_CopyPreview" xml:space="preserve"><value>コピーされるコマンド</value></data>
-  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.1</value></data>
+  <data name="Text_InformationVersion" xml:space="preserve"><value>1.1.2</value></data>
   <data name="Text_Homepage" xml:space="preserve"><value>🌐  ホームページ</value></data>
   <data name="Text_Instagram" xml:space="preserve"><value>📷  Instagram (開発者情報)</value></data>
   <data name="Text_QuickFavoritesOnly" xml:space="preserve"><value>お気に入りのみ</value></data>
